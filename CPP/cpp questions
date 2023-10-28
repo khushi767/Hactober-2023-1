@@ -1,0 +1,44 @@
+// cpp 
+#include<bits/stdc++.h>>
+using namespace std;
+// q1 sum of two array
+
+vector<int> findArraySum(vector<int>&a, int n, vector<int>&b, int m) {
+	int num1=0;
+	int num2=0;
+	for(int i=0;i<n;i++){
+num1=num1*10+a[i];
+	}
+	for(int j=0;j<m;j++){
+num2=num2*10+b[j];
+	}
+	int sum=num2+num1;
+	vector<int> num3;
+while(sum>0){
+	int digit=sum%10;
+	num3.insert(num3.begin(),digit);
+sum=sum/10;
+
+
+}
+return num3;
+}
+
+// q2 rotate the array
+
+ector<int> rotateArray(vector<int>arr, int k) {
+int n=arr.size();
+
+ 
+
+    reverse(arr.begin(),arr.end());
+
+    reverse(arr.begin(),arr.begin()+n-k);
+
+    reverse(arr.begin()+n-k,arr.end());
+
+ 
+
+    return arr;
+}
+
